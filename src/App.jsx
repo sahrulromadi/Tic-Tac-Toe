@@ -1,21 +1,5 @@
 import React from "react";
-
-const Board = () => {
-  return (
-    <div className="board w-1/2 grid grid-cols-3 mx-auto lg:w-1/4">
-      {[...Array(9)].map((_, index) => {
-        return (
-          <button
-            key={index}
-            className="w-full h-full aspect-square bg-orange-500 border border-orange-200 hover:bg-blue-500 text-white"
-          >
-            X
-          </button>
-        );
-      })}
-    </div>
-  );
-};
+import { Board } from "../src/components/Board";
 
 const App = () => {
   return (
@@ -25,7 +9,9 @@ const App = () => {
           <h1 className="title text-orange-500">Games</h1>
           <h2 className="sub-title text-orange-200">Tic Tac Toe</h2>
         </div>
+        {/* components */}
         <Board />
+        {/* components end */}
       </div>
     </main>
   );

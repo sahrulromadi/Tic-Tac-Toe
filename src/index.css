@@ -13,5 +13,5 @@ h2 {
   @apply text-3xl md:text-5xl;
 }
 .board button {
-  @apply text-xl md:text-2xl;
+  @apply text-5xl md:text-8xl;
 }

@@ -5,13 +5,26 @@ export const Board = () => {
   // 9 array dengan isi null
   const [squares, setSquares] = useState(Array(9).fill(null));
 
+  // next player
+  const [isNext, setIsNext] = useState(true);
+
   const handleClick = (index) => {
+    // menangani bug agar tidak bisa ganti
+    if (squares[index]) {
+      return;
+    }
+
     // buat array baru
     const nextSquare = squares.slice();
-    // isi dengan X
-    nextSquare[index] = "X";
+
+    // isi value dengan X / O
+    nextSquare[index] = isNext ? "X" : "O";
+
     // masukkan ke squares
     setSquares(nextSquare);
+
+    // ganti value
+    setIsNext(!isNext);
   };
 
   return (

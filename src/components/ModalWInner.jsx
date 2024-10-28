@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from "react";
 
-export const ModalWinner = ({ winner }) => {
+export const ModalWinner = ({ winner, isDraw }) => {
   const [modalOpen, setOpenModal] = useState(false);
 
   useEffect(() => {
-    if (winner) {
+    if (winner || isDraw) {
       setOpenModal(true);
-    } else {
-      setOpenModal(false);
     }
-  }, [winner]);
+  }, [winner, isDraw]);
 
   const handleCloseModal = () => {
     setOpenModal(false);
@@ -18,8 +16,12 @@ export const ModalWinner = ({ winner }) => {
   return modalOpen ? (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
       <div className="bg-orange-500 px-64 py-10 rounded-lg shadow-lg text-center space-y-10">
-        <h2 className="text-blue-500">Pemenang: {winner}</h2>
-        <p className="text-white">Selamat, Anda Menang!</p>
+        <h2 className="text-blue-500">
+          {winner ? `Pemenang: ${winner}` : "Seri"}
+        </h2>
+        <p className="text-white">
+          {winner ? "Selamat, Anda Menang!" : "Ayo, bermain lagi!"}
+        </p>
         <button
           onClick={handleCloseModal}
           className="bg-blue-500 px-4 py-2 text-white rounded-lg hover:bg-blue-600"

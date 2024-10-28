@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Board } from "../src/components/Board";
 import { Status } from "../src/components/Status";
+import { History } from "../src/components/History";
 
 const App = () => {
   // 9 array dengan isi null
@@ -40,7 +41,10 @@ const App = () => {
           <h1 className="title text-orange-500">Games</h1>
           <h2 className="sub-title text-orange-200">Tic Tac Toe</h2>
         </div>
-        <Board squares={squares} handleClick={handleClick} />
+        <div className="flex items-center justify-center gap-20">
+          <Board squares={squares} handleClick={handleClick} />
+          <History />
+        </div>
       </div>
     </main>
   );

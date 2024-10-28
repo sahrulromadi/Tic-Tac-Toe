@@ -3,7 +3,7 @@ import { Square } from "./Square";
 
 export const Board = ({ squares, handleClick }) => {
   return (
-    <div className="board w-1/2 grid grid-cols-3 mx-auto lg:w-1/4">
+    <div className="board w-1/2 grid grid-cols-3 lg:w-1/4">
       {Array.from({ length: 9 }).map((_, index) => {
         return (
           <Square

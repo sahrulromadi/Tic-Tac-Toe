@@ -12,6 +12,9 @@ h1 {
 h2 {
   @apply text-3xl md:text-5xl;
 }
+p {
+  @apply text-base md:text-lg;
+}
 .board button {
   @apply text-5xl md:text-8xl;
 }

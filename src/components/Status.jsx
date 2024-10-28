@@ -1,4 +1,5 @@
 import React from "react";
+import { ModalWinner } from "./ModalWInner";
 
 export const Status = ({ isNext, squares, calculateWinner }) => {
   const winner = calculateWinner(squares);
@@ -13,6 +14,9 @@ export const Status = ({ isNext, squares, calculateWinner }) => {
   return (
     <div className="absolute top-5 left-5">
       <p className="text-white">{status}</p>
+      {/* modal winner */}
+      <ModalWinner winner={winner} />
+      {/* modal winner end */}
     </div>
   );
 };

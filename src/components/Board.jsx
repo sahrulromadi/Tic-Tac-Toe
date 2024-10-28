@@ -4,7 +4,7 @@ import { Square } from "./Square";
 export const Board = ({ isNext, squares, onPlay, calculateWinner }) => {
   const handleClick = (index) => {
     // agar tidak bisa ditekan lagi
-    if (squares[index]) {
+    if (squares[index] || calculateWinner(squares)) {
       return;
     }
 

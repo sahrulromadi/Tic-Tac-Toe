@@ -52,11 +52,13 @@ const App = () => {
 
   return (
     <main className="min-h-screen relative flex justify-center items-center bg-gray-900">
+      {/* status */}
       <Status
         isNext={isNext}
         squares={currentSquares} // gunakan currentSquares
         calculateWinner={calculateWinner}
       />
+      {/* status end */}
       <div className="container text-center space-y-20 lg:space-y-16">
         <div className="text space-y-3">
           <h1 className="title text-orange-500">Games</h1>

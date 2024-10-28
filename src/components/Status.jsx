@@ -17,20 +17,24 @@ export const Status = ({ isNext, squares, calculateWinner, onRestart }) => {
   }
 
   return (
-    <div className="absolute top-5 left-5">
-      <p className="text-white">{status}</p>
-      {/* modal winner */}
-      <ModalWinner winner={winner} isDraw={isDraw} />
-      {/* modal winner end */}
+    <div className="absolute container top-5 flex flex-row items-center justify-between">
+      <div className="mx-5 md:mx-0">
+        <p className="text-white">{status}</p>
+        {/* modal winner */}
+        <ModalWinner winner={winner} isDraw={isDraw} />
+        {/* modal winner end */}
+      </div>
 
       {/* akan muncul jika ada pemenang dan berakhir seri */}
       {(winner || isDraw) && (
-        <button
-          onClick={onRestart}
-          className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 mt-4"
-        >
-          Mulai lagi
-        </button>
+        <div className="mx-5 md:mx-0">
+          <button
+            onClick={onRestart}
+            className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600"
+          >
+            Mulai lagi
+          </button>
+        </div>
       )}
     </div>
   );

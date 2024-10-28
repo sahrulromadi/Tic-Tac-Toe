@@ -67,12 +67,12 @@ const App = () => {
         onRestart={restartGame}
       />
       {/* status end */}
-      <div className="container text-center space-y-20 lg:space-y-16">
+      <div className="container text-center space-y-16">
         <div className="text space-y-3">
           <h1 className="title text-orange-500">Games</h1>
           <h2 className="sub-title text-orange-200">Tic Tac Toe</h2>
         </div>
-        <div className="flex items-center justify-center gap-20">
+        <div className="flex items-center justify-around md:justify-center md:gap-20">
           <Board
             squares={currentSquares}
             onPlay={handlePlay}

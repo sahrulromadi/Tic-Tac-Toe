@@ -15,7 +15,7 @@ export const ModalWinner = ({ winner, isDraw }) => {
 
   return modalOpen ? (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-      <div className="bg-orange-500 px-64 py-10 rounded-lg shadow-lg text-center space-y-10">
+      <div className="bg-orange-500 rounded-lg shadow-lg text-center space-y-10 px-20 py-10 md:px-64 md:py-10">
         <h2 className="text-blue-500">
           {winner ? `Pemenang: ${winner}` : "Seri"}
         </h2>

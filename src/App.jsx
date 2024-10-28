@@ -50,6 +50,13 @@ const App = () => {
     return null;
   };
 
+  // restart
+  const restartGame = () => {
+    setHistory([Array(9).fill(null)]);
+    setCurrentMove(0);
+    setIsNext(true);
+  };
+
   return (
     <main className="min-h-screen relative flex justify-center items-center bg-gray-900">
       {/* status */}
@@ -57,6 +64,7 @@ const App = () => {
         isNext={isNext}
         squares={currentSquares} // gunakan currentSquares
         calculateWinner={calculateWinner}
+        onRestart={restartGame}
       />
       {/* status end */}
       <div className="container text-center space-y-20 lg:space-y-16">

@@ -1,8 +1,3 @@
-# React + Vite
+![FireShot Capture 006 - Tic Tac Toe - localhost](https://github.com/user-attachments/assets/707c434a-4631-491a-b6a9-1f6c070d8f3f)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![FireShot Capture 005 - Tic Tac Toe - localhost](https://github.com/user-attachments/assets/c2a532db-f39a-48c9-848f-da0f165b55c3)
